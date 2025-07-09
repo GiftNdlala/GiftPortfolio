@@ -119,7 +119,7 @@ Let your **portfolio app's features prove your abilities** without needing a CV:
 
    * Create pages:
 
-     * `/` (home)
+     * `/` (home Index)
      * `/project/[id]` (project detail)
      * `/admin` (admin panel – protected)
 
