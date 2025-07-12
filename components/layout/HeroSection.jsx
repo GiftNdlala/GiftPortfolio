@@ -88,18 +88,16 @@ export default function HeroSection() {
               <p className="text-white">Overall Years</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-green-400">{Array.isArray(stats.certifications_and_badges) ? stats.certifications_and_badges.length : 0}</p>
+              <a
+                href="/about#certifications"
+                className="text-3xl font-bold text-green-400 underline hover:text-green-300 transition"
+                title="View all certifications and badges in About Me section"
+              >
+                {Array.isArray(stats.certifications_and_badges) ? stats.certifications_and_badges.length : 0}
+              </a>
               <p className="text-white">Certifications & Badges</p>
             </div>
           </div>
-          {/* Certifications List */}
-          {Array.isArray(stats.certifications_and_badges) && stats.certifications_and_badges.length > 0 && (
-            <ul className="bg-gray-800 p-4 rounded-lg text-white mt-6 max-w-xl mx-auto text-left text-sm space-y-1">
-              {stats.certifications_and_badges.map((cert, idx) => (
-                <li key={idx}>- {cert.title}</li>
-              ))}
-            </ul>
-          )}
         </section>
       )}
     </>
