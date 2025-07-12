@@ -62,19 +62,11 @@ export default function AboutPage() {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <div className="mb-6">
-            {profile.profile_image_url ? (
-              <img
-                src={profile.profile_image_url}
-                alt={profile.full_name || 'Profile'}
-                className="w-32 h-32 rounded-full mx-auto border-4 border-green-500 shadow-lg object-cover"
-              />
-            ) : (
-              <img
-                src="/images/profile-picture.png"
-                alt={profile.full_name || 'Profile'}
-                className="w-32 h-32 rounded-full mx-auto border-4 border-green-500 shadow-lg object-cover"
-              />
-            )}
+            <img
+              src="/images/about-profile.jpg"
+              alt={profile.full_name || 'Profile'}
+              className="w-32 h-32 rounded-full mx-auto border-4 border-green-500 shadow-lg object-cover"
+            />
           </div>
           <h1 className="text-4xl font-bold mb-4">{profile.full_name || 'Gift Ndlala'}</h1>
           <h2 className="text-2xl text-green-600 dark:text-green-400 mb-6">{profile.title || 'Software Developer'}</h2>
